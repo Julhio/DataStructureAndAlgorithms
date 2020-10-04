@@ -1,3 +1,32 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+*
+!/**/
+!*.*
+
+# Unignore all files with extensions recursively
+!**/*.*
+
+# Unignore Makefiles recursively
+!**/Makefile
+
+# Unignore all dirs
+#!*/
+
+# Ignore files with extension `.class` & `.sm`
+*.class
+*.sm
+
+# Ignore `bin` dir
+bin/
+# or
+*/bin/*
+
+# Unignore all `.jar` in `bin` dir
+!*/bin/*.jar
+
 # Prerequisites
 *.d
 
