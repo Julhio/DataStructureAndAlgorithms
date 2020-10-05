@@ -13,41 +13,41 @@
 
 typedef Vector Heap;
 
-int HeapPai(int i){
+int HeapRoot(int i){
   return ((i - 1) / 2);
 }
 
 
-int HeapFilhoEsq(int i){
+int HeapLeafLeft(int i){
   return (2 * i + 1);
 }
 
 
-int HeapFilhoDir(int i){
+int HeapLeafRight(int i){
   return (2 * i + 2);
 }
 
 
-void Sobe(Heap *p, int i){
+void GoUp(Heap *p, int i){
   int x,j;
 
   x = p->V[i];
-  j = HeapPai(i);
+  j = HeapRoot(i);
 
   while(i > 0 && p->V[j] < x){
     p->V[i] = p->V[j];
     i = j;
-    j = HeapPai(j);
+    j = HeapRoot(j);
   }
   p->V[i] = x;
 }
 
 
-void Desce(Heap *p, int i){
+void GoDown(Heap *p, int i){
   int k,x;
 
   x = p->V[i];
-  k = HeapFilhoEsq(i);
+  k = HeapLeafLeft(i);
   while(k < p->n){
     if(k+1 < p->n){ /* Pega o maior filho. */
       if(p->V[k] < p->V[k+1])
@@ -56,7 +56,7 @@ void Desce(Heap *p, int i){
     if(p->V[k] > x){
       p->V[i] = p->V[k];
       i = k;
-      k = HeapFilhoEsq(k);
+      k = HeapLeafLeft(k);
     }
     else break;
   }
@@ -69,7 +69,7 @@ void BuildHeap(Heap *p){
   int i;
 
   for(i = 1; i < p->n; i++)
-    Sobe(p, i);
+    GoUp(p, i);
 }
 
 
@@ -78,17 +78,17 @@ void BuildHeapFast(Heap *p){
   int i,u;
 
   /* ultimo no nao folha. */
-  u = HeapPai(p->n - 1);
+  u = HeapRoot(p->n - 1);
 
   for(i = u; i >= 0; i--)
-    Desce(p, i);
+    GoDown(p, i);
 }
 
 
-void InsereHeap(Heap *p, int x){
+void InsertHeap(Heap *p, int x){
   p->V[p->n] = x;
   p->n++;
-  Sobe(p, p->n-1); 
+  GoUp(p, p->n-1); 
 }
 
 
@@ -100,7 +100,7 @@ int RemoveHeap(Heap *p){
   x = p->V[0];
   p->V[0] = p->V[p->n-1];
   p->n--;
-  Desce(p, 0);
+  GoDown(p, 0);
   return x;
 }
 
@@ -117,7 +117,7 @@ void HeapSort(Vector *p){
     p->V[i] = tmp;
 
     p->n--;
-    Desce((Heap *)p, 0);    
+    GoDown((Heap *)p, 0);    
   }
   p->n = nn;
 }
