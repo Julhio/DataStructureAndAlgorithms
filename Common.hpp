@@ -30,7 +30,7 @@ int RandomInteger (int low, int high) {
 
 void PrintVector(Vector *p) {
   int i;
-  for(i=0; i<p->n; i++){
+  for(i=0; i<=p->n; i++){
     printf("%d ",p->V[i]);
   }
   printf("\n");

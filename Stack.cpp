@@ -6,62 +6,37 @@
 // Description : Stack implementation
 //============================================================================
 
-
 #include <stdio.h>
 #include <stdlib.h>
-#include "Common.hpp"
 #include <iostream>
+#include "Stack.hpp"
 
 using namespace std;
 
-typedef Vector Stack;
-
-int Size(Stack *p){
-  return ((p->n));
-}
-
-int isEmpty(Stack *p){
-  if(p->n < 0) return 1; 
-  return  0;
-}
-
-void Push(Stack *p, int x){
-  if(Size(p) == 999)
-    exit(-1);
-  p->V[p->n] = x;
-  p->n++;
-}
-
-void Pop(Stack *p){
-  if(isEmpty(p)) 
-    exit(-1);
-  p->V[p->n] = (int)' ';
-  p->n--;
-}
-
-int Top(Stack *p){
-  if(isEmpty(p)) 
-    exit(-1);
-  return p->V[p->n - 1];
-}
-
-
 int main(){
-  Vector A;
+  Stack A;
+  Erase(&A);
 
+  cout << "Push 13" << endl;
   Push(&A, 13);
+  cout << "Push 15" << endl;
   Push(&A, 15);
+  cout << "Push 9" << endl;
   Push(&A, 9);
 
-  cout << Size(&A) << endl;
-  cout << Top(&A) << endl;
+  cout << "Size: " << Size(&A) << endl;
+  cout << "Vector: ";
   PrintVector(&A);
-
+  cout << "Top: " << Top(&A) << endl;
+  
+  cout << "Pop" << endl;
   Pop(&A);
 
-  cout << Size(&A) << endl;
-  cout << Top(&A) << endl;
+  cout << "Size: " << Size(&A) << endl;
+  cout << "Vector: ";
   PrintVector(&A);
+  cout << "Top: " << Top(&A) << endl;
+
 
   cout << endl;
   return 0;
