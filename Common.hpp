@@ -1,10 +1,13 @@
-//============================================================================
-// Name        : Common.hpp
-// Author      : Julhio Cesar Navas
-// Version     :
-// Copyright   : Instituto Tecnológico de Aeronáutica
-// Description : Common and auxiliary functions 
-//============================================================================
+/**
+ * @file Common.hpp
+ * @author Julhio Cesar Navas
+ * @brief Common and auxiliary functions 
+ * @version 0.1
+ * @date 2020-10-14
+ * 
+ * @copyright Instituto Tecnológico de Aeronáutica. Copyright (c) 2020
+ * 
+ */
 
 #ifndef COMMON_HPP_
 #define COMMON_HPP_
@@ -15,10 +18,11 @@
 
 #define VMAX 1000
 
-typedef struct _vector{
-  int n; /* Comprimento atual. */
-  int V[VMAX];
-} Vector;
+template <class T>
+struct _vector{
+  size_t n;
+  T V[VMAX];
+};
 
 int RandomInteger (int low, int high) {
     int k;
@@ -28,7 +32,8 @@ int RandomInteger (int low, int high) {
     return low + k;
 }
 
-void PrintVector(Vector *p) {
+template <class P>
+void PrintVector(P *p) {
   int i;
   for(i=0; i<=p->n; i++){
     printf("%d ",p->V[i]);

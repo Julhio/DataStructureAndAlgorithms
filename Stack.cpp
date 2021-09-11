@@ -1,10 +1,13 @@
-//============================================================================
-// Name        : Stack.cpp
-// Author      : Julhio Cesar Navas
-// Version     :
-// Copyright   : Instituto Tecnológico de Aeronáutica
-// Description : Stack implementation
-//============================================================================
+/**
+ * @file Stack.cpp
+ * @author Julhio Cesar Navas
+ * @brief Stack implementation 
+ * @version 0.1
+ * @date 2020-10-14
+ * 
+ * @copyright Instituto Tecnológico de Aeronáutica. Copyright (c) 2020
+ * 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>

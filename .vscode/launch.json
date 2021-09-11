@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [
-                "-std=c++17"
+                "1000000000"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

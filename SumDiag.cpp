@@ -1,10 +1,14 @@
-//============================================================================
-// Name        : SumDiag.cpp
-// Author      : Julhio Cesar Navas
-// Version     :
-// Copyright   : Instituto Tecnológico de Aeronáutica
-// Description : Recursive sum of the diagonal elements of given matrix nxn
-//============================================================================
+/**
+ * @file SumDiag.cpp
+ * @author Julhio Cesar Navas
+ * @brief Recursive sum of the diagonal elements of given matrix n x n
+ * @version 0.1
+ * @date 2020-10-15
+ * 
+ * @copyright Instituto Tecnológico de Aeronáutica. Copyright (c) 2020
+ * 
+ */
+
 #include <string.h>
 #include <stdio.h> 
 #include <iostream>

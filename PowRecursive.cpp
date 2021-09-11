@@ -1,10 +1,13 @@
-//============================================================================
-// Name        : PowRecursive.cpp
-// Author      : Julhio Cesar Navas
-// Version     :
-// Copyright   : Instituto Tecnológico de Aeronáutica
-// Description : Recursive Function to calculate a number raised to a power
-//============================================================================
+/**
+ * @file PowRecursive.cpp
+ * @author Julhio Cesar Navas
+ * @brief Recursive Function to calculate a number raised to a power
+ * @version 0.1
+ * @date 2020-09-08
+ * 
+ * @copyright Instituto Tecnológico de Aeronáutica. Copyright (c) 2020
+ * 
+ */
 
 #include <iostream>
 using namespace std;

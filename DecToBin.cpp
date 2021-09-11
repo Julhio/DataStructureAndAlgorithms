@@ -1,10 +1,13 @@
-//============================================================================
-// Name        : DecToBin.cpp
-// Author      : Julhio Cesar Navas
-// Version     :
-// Copyright   : Instituto Tecnológico de Aeronáutica
-// Description : Recursive Dec to Bin converter
-//============================================================================
+/**
+ * @file DecToBin.cpp
+ * @author Julhio Cesar Navas
+ * @brief Recursive Dec to Bin converter
+ * @version 0.1
+ * @date 2020-09-08
+ * 
+ * @copyright Instituto Tecnológico de Aeronáutica. Copyright (c) 2020
+ * 
+ */
 
 #include <iostream>
 using namespace std;

@@ -1,3 +1,15 @@
+/**
+ * @file Heap.cpp
+ * @author 
+ * @brief 
+ * @version 0.1
+ * @date 2020-09-08
+ * 
+ * @copyright Instituto Tecnológico de Aeronáutica. Copyright (c) 2020
+ * 
+ */
+
+
 //============================================================================
 // Name        : Heap.cpp
 // Author      : Julhio Cesar Navas
@@ -11,7 +23,7 @@
 #include <stdlib.h>
 #include "Common.hpp"
 
-typedef Vector Heap;
+typedef _vector<int> Heap;
 
 int HeapRoot(int i){
   return ((i - 1) / 2);
@@ -105,9 +117,9 @@ int RemoveHeap(Heap *p){
 }
 
 
-void HeapSort(Vector *p){
+void HeapSort(Heap *p){
   int i,tmp,nn;
-
+  
   nn = p->n;
   BuildHeapFast((Heap *)p);
 
@@ -124,7 +136,7 @@ void HeapSort(Vector *p){
 
 
 int main(){
-  Vector A;
+  Heap A;
   int i;
 
   A.n = 10;
